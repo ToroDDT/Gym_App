@@ -3,6 +3,7 @@ import SideBar from "./sideBar";
 import Button from "@mui/material/Button";
 import "./Stylesheets.css/NavBar.css";
 import "./Stylesheets.css/Dashboard.css";
+import { Dialog, dialogContentClasses } from "@mui/material";
 
 function App() {
   const [DialogForExcerciseOptions, setDialogForExcerciseOptions] =
@@ -15,6 +16,31 @@ function App() {
       <NavNar />
       <DashBoard />
     </div>
+  );
+}
+
+function ExcerciseOptionsDialog() {
+  type excerciseOptionstype =
+    | "Cardio"
+    | "Gym"
+    | "Individual Sport"
+    | "Occupational"
+    | "Outdoor Activity";
+  const excerciseOptions: excerciseOptionstype[] = [
+    "Gym",
+    "Cardio",
+    "Individual Sport",
+    "Occupational",
+    "Outdoor Activity",
+  ];
+  return (
+    <dialog>
+      {excerciseOptions.map((excerciseType) => (
+        <Button variant="outlined" key={excerciseType}>
+          {excerciseType}
+        </Button>
+      ))}
+    </dialog>
   );
 }
 
