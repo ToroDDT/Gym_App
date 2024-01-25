@@ -31,4 +31,31 @@ export default function ExcerciseOptionsDialog() {
   );
 }
 
-function GymOptions() {}
+function GymOptions() {
+  {
+    type typeOfGymExcercises =
+      | "Calisthenics"
+      | "Eliptical"
+      | "Group Classes"
+      | "Jumping Rope"
+      | "Resistance Training"
+      | "Stair Treadmill"
+      | "Treadmill Walking";
+    const GymExcercises: typeOfGymExcercises[] = [
+      "Calisthenics",
+      "Eliptical",
+      "Group Classes",
+      "Jumping Rope",
+      "Resistance Training",
+      "Stair Treadmill",
+      "Treadmill Walking",
+    ];
+    return (
+      <div>
+        {GymExcercises.map((excerciseStyle) => (
+          <Button>{excerciseStyle}</Button>
+        ))}
+      </div>
+    );
+  }
+}
