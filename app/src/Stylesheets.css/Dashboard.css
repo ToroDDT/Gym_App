@@ -1,0 +1,20 @@
+.Dashboard {
+  display: flex;
+  background-color: #faf0e6;
+  flex-direction: row;
+  padding-bottom: 100rem;
+}
+
+.Diary {
+  display: flex;
+  margin-left: 5em;
+  margin-top: 2em;
+  background-color: white;
+  padding: 2em;
+  border-radius: 18px;
+}
+.Trackers {
+  display: flex;
+  margin-left: 5em;
+  gap: 0.5em;
+}
