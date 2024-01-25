@@ -5,8 +5,13 @@ import "./Stylesheets.css/NavBar.css";
 import "./Stylesheets.css/Dashboard.css";
 
 function App() {
+  const [DialogForExcerciseOptions, setDialogForExcerciseOptions] =
+    useState<boolean>(false);
   return (
     <div>
+      <ExcerciseOptionsDialog
+        DialogForExcerciseOptions={DialogForExcerciseOptions}
+      />
       <NavNar />
       <DashBoard />
     </div>
@@ -38,10 +43,14 @@ function HealthTrackers(): JSX.Element {
     "NOTE",
     "WATER",
   ];
+
+  const onClick = () => {
+    setDialogForExcerciseOptions();
+  };
   return (
     <div className="Trackers">
       {Trackers.map((tracker: healthTrackers) => (
-        <Button key={tracker} variant="outlined">
+        <Button key={tracker} onClick={onClick} variant="outlined">
           {tracker}
         </Button>
       ))}
