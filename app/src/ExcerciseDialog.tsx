@@ -46,6 +46,13 @@ function Cardio() {
     "Stair Treadmill",
     "Walking",
   ];
+  return (
+    <div>
+      {TypeOfCardio.map((cardio) => (
+        <Button key={cardio}>{}</Button>
+      ))}
+    </div>
+  );
 }
 
 function Gym() {
