@@ -31,7 +31,24 @@ export default function ExcerciseOptionsDialog() {
   );
 }
 
-function GymOptions() {
+function Cardio() {
+  type typesOfCardio =
+    | "Cycling"
+    | "Elliptical"
+    | "Running"
+    | "Walking"
+    | "Stair Treadmill";
+
+  const TypeOfCardio: typesOfCardio[] = [
+    "Cycling",
+    "Elliptical",
+    "Running",
+    "Stair Treadmill",
+    "Walking",
+  ];
+}
+
+function Gym() {
   {
     type typeOfGymExcercises =
       | "Calisthenics"
@@ -80,7 +97,3 @@ function Calculate() {
     </div>
   );
 }
-
-// when excercise button is clicked
-// create a dialog
-// this dialog will contain all excercising options
