@@ -2,8 +2,7 @@ import { Button } from "@mui/material";
 import { useState } from "react";
 
 export default function ExcerciseOptionsDialog() {
-  const [excerciseOptionsDisplay, setExcerciseOptionsDisplay] =
-    useState<boolean>(true);
+  const [gymOptionsElements, setGymOptionsElements] = useState<boolean>(false);
   type excerciseOptionstype =
     | "Cardio"
     | "Gym"
@@ -18,8 +17,9 @@ export default function ExcerciseOptionsDialog() {
     "Outdoor Activity",
   ];
   const onClick = () => {
-    setExcerciseOptionsDisplay(false);
+    setGymOptionsElements(true);
   };
+
   return (
     <dialog>
       {excerciseOptions.map((excerciseType) => (
@@ -59,3 +59,28 @@ function GymOptions() {
     );
   }
 }
+
+function Calculate() {
+  return (
+    <div>
+      <div>Calisthenics</div>
+      <div>
+        <label>
+          <span>Effort Level</span> <input type="select"></input> s
+          <span>Min</span>
+        </label>
+        <label>
+          <span>Duration</span>
+          <input type="text" />
+        </label>
+        <label>
+          <span>Energy</span>
+        </label>
+      </div>
+    </div>
+  );
+}
+
+// when excercise button is clicked
+// create a dialog
+// this dialog will contain all excercising options
